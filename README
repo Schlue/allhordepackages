@@ -1,0 +1,19 @@
+
+composer install --prefer-source
+cd vendor/horde/<package>
+composer config minimum-stability dev
+composer install
+phpunit
+
+* test/../AllTests.php
+* test/../bootstrap.php
+* make unit test running
+* fix all broken test
+* fix all deprecate warnings
+* check skipped test cases
+* .github/workflows/ci.yml
+* .gitignore
+...
+git add <files>
+git commit
+gh pr create
