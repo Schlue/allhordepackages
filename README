@@ -1,12 +1,16 @@
+The files in this repository should help the developer of horde with their work with the huge amount of packages. All horde packages will be downloaded and unit tests can be executed:
 
-composer install --prefer-source
-cd vendor/horde/<package>
-composer config minimum-stability dev
-composer install
-phpunit
 
-* test/../AllTests.php
-* test/../bootstrap.php
+> git clone https://github.com/Schlue/allhordepackages.git
+> composer install --prefer-source
+> cd vendor/horde/<package>
+> composer config minimum-stability dev
+> composer install
+> phpunit
+
+
+* Update test/../AllTests.php (template from horde/text_diff)
+* Updste test/../bootstrap.php (template from horde/text_diff)
 * make unit test running
 * fix all broken test
 * fix all deprecate warnings
@@ -14,6 +18,7 @@ phpunit
 * .github/workflows/ci.yml
 * .gitignore
 ...
-git add <files>
-git commit
-gh pr create
+
+> git add <changed files>
+> git commit
+> gh pr create
